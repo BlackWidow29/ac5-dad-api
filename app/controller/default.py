@@ -21,9 +21,3 @@ def login(email, password):
             return '{"response": "Senha inválida."}'
 
         return dumps({"response": user.id})
-
-
-@app.route('/logout')
-def logout():
-    logout_user()
-    return redirect(url_for('login'))
